@@ -5,7 +5,6 @@ on:
     branches: [main]
     paths-ignore:
       - CHANGELOG.md
-      - 'docs/**'
 
 jobs:
   release:
@@ -24,8 +23,20 @@ jobs:
 
       - run: npm install
 
+      - name: Detectar se é só mudança de docs
+        id: check
+        run: |
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || git rev-list --max-parents=0 HEAD)
+          CHANGED=$(git diff --name-only "$LAST_TAG"..HEAD)
+          if echo "$CHANGED" | grep -qvE '^docs/'; then
+            echo "docs_only=false" >> $GITHUB_OUTPUT
+          else
+            echo "docs_only=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Detectar tipo de bump
         id: bump
+        if: steps.check.outputs.docs_only == 'false'
         run: |
           LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || git rev-list --max-parents=0 HEAD)
           COMMITS=$(git log "$LAST_TAG"..HEAD --pretty=format:"%s")
@@ -42,6 +53,7 @@ jobs:
           echo "Bump detectado: $BUMP"
 
       - name: Bumpar versão
+        if: steps.check.outputs.docs_only == 'false'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -55,9 +67,11 @@ jobs:
           echo "Versão final: $VERSION"
 
       - name: Atualizar changelog
+        if: steps.check.outputs.docs_only == 'false'
         run: npm run changelog:all
 
       - name: Commitar e criar tag
+        if: steps.check.outputs.docs_only == 'false'
         run: |
           VERSION=$(node -p "require('./package.json').version")
           git add package.json CHANGELOG.md
@@ -67,6 +81,7 @@ jobs:
           git push --tags
 
       - name: Criar release no GitHub
+        if: steps.check.outputs.docs_only == 'false'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
