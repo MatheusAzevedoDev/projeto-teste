@@ -46,6 +46,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           npm version ${{ steps.bump.outputs.type }} --no-git-tag-version
+          VERSION=$(node -p "require('./package.json').version")
+          while git ls-remote --tags origin "refs/tags/v$VERSION" | grep -q "v$VERSION"; do
+            echo "Tag v$VERSION já existe, incrementando patch..."
+            npm version patch --no-git-tag-version
+            VERSION=$(node -p "require('./package.json').version")
+          done
+          echo "Versão final: $VERSION"
 
       - name: Atualizar changelog
         run: npm run changelog:all
