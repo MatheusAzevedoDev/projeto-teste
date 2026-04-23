@@ -23,6 +23,20 @@ jobs:
 
       - run: npm install
 
+      - name: Sincronizar versão com última tag
+        run: |
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          if [ -n "$LATEST_TAG" ]; then
+            LATEST_VERSION="${LATEST_TAG#v}"
+            CURRENT_VERSION=$(node -p "require('./package.json').version")
+            if [ "$CURRENT_VERSION" != "$LATEST_VERSION" ]; then
+              echo "package.json ($CURRENT_VERSION) desatualizado, sincronizando com $LATEST_TAG..."
+              npm version "$LATEST_VERSION" --no-git-tag-version --allow-same-version
+            else
+              echo "Versão já sincronizada: $CURRENT_VERSION"
+            fi
+          fi
+
       - name: Detectar se é só mudança de docs
         id: check
         run: |
@@ -75,7 +89,7 @@ jobs:
         run: |
           VERSION=$(node -p "require('./package.json').version")
           git add package.json CHANGELOG.md
-          git commit -m "chore: release v$VERSION [skip ci]"
+          git commit -m "v$VERSION [skip ci]"
           git tag "v$VERSION"
           git push
           git push --tags
