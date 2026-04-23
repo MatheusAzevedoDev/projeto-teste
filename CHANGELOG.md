@@ -1,5 +1,10 @@
+## 0.15.0 (2026-04-23)
+
+* feat: yuri alberto ([5068ef5](https://github.com/MatheusAzevedoDev/projeto-teste/commit/5068ef5))
+
 ## 0.14.0 (2026-04-23)
 
+* chore: release v0.14.0 [skip ci] ([8e9c82e](https://github.com/MatheusAzevedoDev/projeto-teste/commit/8e9c82e))
 * feat: force deploy ([f1b1d83](https://github.com/MatheusAzevedoDev/projeto-teste/commit/f1b1d83))
 
 ## 0.13.0 (2026-04-23)
