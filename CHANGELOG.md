@@ -1,5 +1,10 @@
+## <small>0.3.1 (2026-04-23)</small>
+
+* teste amem ([dda3524](https://github.com/MatheusAzevedoDev/projeto-teste/commit/dda3524))
+
 ## 0.3.0 (2026-04-23)
 
+* chore: release v0.3.0 [skip ci] ([2446ccf](https://github.com/MatheusAzevedoDev/projeto-teste/commit/2446ccf))
 * Ajuste ([6482036](https://github.com/MatheusAzevedoDev/projeto-teste/commit/6482036))
 * Ajuste ([29526d0](https://github.com/MatheusAzevedoDev/projeto-teste/commit/29526d0))
 * ajuste vaiii ([ba02069](https://github.com/MatheusAzevedoDev/projeto-teste/commit/ba02069))
