@@ -1,5 +1,11 @@
+## 0.7.0 (2026-04-23)
+
+* feat: teste docs ([de9a481](https://github.com/MatheusAzevedoDev/projeto-teste/commit/de9a481))
+* feat: teste workflow ([11eb688](https://github.com/MatheusAzevedoDev/projeto-teste/commit/11eb688))
+
 ## 0.6.0 (2026-04-23)
 
+* chore: release v0.6.0 [skip ci] ([93ea08a](https://github.com/MatheusAzevedoDev/projeto-teste/commit/93ea08a))
 * feat: teste workflows ([fc3fbf0](https://github.com/MatheusAzevedoDev/projeto-teste/commit/fc3fbf0))
 
 ## 0.5.0 (2026-04-23)
