@@ -8,17 +8,18 @@ jobs:
   open-pr-to-main:
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
-
       - name: Abrir PR para main
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          EXISTING=$(gh pr list --head develop --base main --json number --jq length)
+          REPO="${{ github.repository }}"
+          EXISTING=$(gh pr list --repo "$REPO" --head develop --base main --json number --jq length)
           if [ "$EXISTING" = "0" ]; then
             gh pr create \
+              --repo "$REPO" \
               --base main \
               --head develop \
               --title "chore: promote develop → main" \
