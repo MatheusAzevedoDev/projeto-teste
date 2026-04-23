@@ -1,5 +1,10 @@
+## <small>0.2.3 (2026-04-23)</small>
+
+* teste gloria ([2c19fa4](https://github.com/MatheusAzevedoDev/projeto-teste/commit/2c19fa4))
+
 ## <small>0.3.1 (2026-04-23)</small>
 
+* chore: release v0.3.1 [skip ci] ([6bf9e69](https://github.com/MatheusAzevedoDev/projeto-teste/commit/6bf9e69))
 * teste amem ([dda3524](https://github.com/MatheusAzevedoDev/projeto-teste/commit/dda3524))
 
 ## 0.3.0 (2026-04-23)
