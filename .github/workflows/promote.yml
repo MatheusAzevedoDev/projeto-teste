@@ -10,8 +10,6 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
-
       - name: Abrir PR para main
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
