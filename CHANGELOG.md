@@ -1,5 +1,10 @@
+## 0.8.0 (2026-04-23)
+
+* feat: agora vai ([d168a7b](https://github.com/MatheusAzevedoDev/projeto-teste/commit/d168a7b))
+
 ## 0.7.0 (2026-04-23)
 
+* chore: release v0.7.0 [skip ci] ([b942e57](https://github.com/MatheusAzevedoDev/projeto-teste/commit/b942e57))
 * feat: teste docs ([de9a481](https://github.com/MatheusAzevedoDev/projeto-teste/commit/de9a481))
 * feat: teste workflow ([11eb688](https://github.com/MatheusAzevedoDev/projeto-teste/commit/11eb688))
 
