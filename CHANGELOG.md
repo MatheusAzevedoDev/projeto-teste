@@ -1,5 +1,11 @@
+## 0.5.0 (2026-04-23)
+
+* add version ([956a928](https://github.com/MatheusAzevedoDev/projeto-teste/commit/956a928))
+* feat: teste changelog ([82689eb](https://github.com/MatheusAzevedoDev/projeto-teste/commit/82689eb))
+
 ## <small>0.2.4 (2026-04-23)</small>
 
+* chore: release v0.2.4 [skip ci] ([6ca7e87](https://github.com/MatheusAzevedoDev/projeto-teste/commit/6ca7e87))
 * teste amemmm ([061d4ae](https://github.com/MatheusAzevedoDev/projeto-teste/commit/061d4ae))
 
 ## <small>0.2.3 (2026-04-23)</small>
