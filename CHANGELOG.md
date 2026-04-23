@@ -1,5 +1,12 @@
+## 0.13.0 (2026-04-23)
+
+* feat: ajuste doc ([253a6b1](https://github.com/MatheusAzevedoDev/projeto-teste/commit/253a6b1))
+* feat: foii ([3e53375](https://github.com/MatheusAzevedoDev/projeto-teste/commit/3e53375))
+* feat: novo workflow ([b1faf01](https://github.com/MatheusAzevedoDev/projeto-teste/commit/b1faf01))
+
 ## 0.12.0 (2026-04-23)
 
+* chore: release v0.12.0 [skip ci] ([1e4987a](https://github.com/MatheusAzevedoDev/projeto-teste/commit/1e4987a))
 * feat: teste ([d969de0](https://github.com/MatheusAzevedoDev/projeto-teste/commit/d969de0))
 
 ## 0.11.0 (2026-04-23)
