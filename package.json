@@ -1,7 +1,9 @@
 {
   "name": "projeto-teste",
-  "version": "0.3.1",
-  "description": "",
+  "displayName": "Projeto Teste",
+  "version": "0.2.2",
+  "description": "Projeto de teste do template GitOps.",
+  "tags": ["GitOps", "Template"],
   "scripts": {
     "commit": "cz",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1",
