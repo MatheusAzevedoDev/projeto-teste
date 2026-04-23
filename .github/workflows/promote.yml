@@ -22,7 +22,7 @@ jobs:
               --repo "$REPO" \
               --base main \
               --head develop \
-              --title "chore: promote develop → main" \
+              --title "promote: develop → main" \
               --body "PR automático gerado após merge em \`develop\`. Revise antes de fazer merge para \`main\` (produção)."
           else
             echo "PR já existe para develop → main, pulando."

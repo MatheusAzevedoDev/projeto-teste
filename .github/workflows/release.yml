@@ -68,6 +68,8 @@ jobs:
 
       - name: Bumpar versão
         if: steps.check.outputs.docs_only == 'false'
+        env:
+          HUSKY: 0
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -86,6 +88,8 @@ jobs:
 
       - name: Commitar e criar tag
         if: steps.check.outputs.docs_only == 'false'
+        env:
+          HUSKY: 0
         run: |
           VERSION=$(node -p "require('./package.json').version")
           git add package.json CHANGELOG.md
