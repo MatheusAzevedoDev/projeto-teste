@@ -1,5 +1,10 @@
+## 0.6.0 (2026-04-23)
+
+* feat: teste workflows ([fc3fbf0](https://github.com/MatheusAzevedoDev/projeto-teste/commit/fc3fbf0))
+
 ## 0.5.0 (2026-04-23)
 
+* chore: release v0.5.0 [skip ci] ([fcd744a](https://github.com/MatheusAzevedoDev/projeto-teste/commit/fcd744a))
 * add version ([956a928](https://github.com/MatheusAzevedoDev/projeto-teste/commit/956a928))
 * feat: teste changelog ([82689eb](https://github.com/MatheusAzevedoDev/projeto-teste/commit/82689eb))
 

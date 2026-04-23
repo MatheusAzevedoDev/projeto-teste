@@ -1,7 +1,7 @@
 {
   "name": "projeto-teste",
   "displayName": "Projeto Teste",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Projeto de teste do template GitOps.",
   "tags": [
     "GitOps",
